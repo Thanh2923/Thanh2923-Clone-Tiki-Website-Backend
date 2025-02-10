@@ -14,10 +14,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
+  "username": "avnadmin",
+  "password": "AVNS_-t5QiTwrKmjVakEyrzC",
+  "database": "defaultdb",
+  "host": "mysql-1d29ed61-thanhnv2923-153a.k.aivencloud.com",
+  "port": 24621,
+  "dialect": "mysql"
+}
 }
