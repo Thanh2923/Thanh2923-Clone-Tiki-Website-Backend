@@ -1,0 +1,27 @@
+const express = require('express');
+const userRoutes = require('./userRoutes');
+const categoryRoutes = require('./categoryRoutes');
+const productRoutes = require('./productRoutes');
+const cartRoutes = require('./cartRoutes');
+const imageRoutes = require('./imageRoutes');
+const orderRoutes = require('./orderRoutes');
+const orderItemRoutes = require('./orderItemRoutes');
+const paymentRoutes = require('./paymentRoutes');
+const reviewRoutes = require('./reviewRoutes');
+const authRoutes = require('./authRoutes');
+const brandRoutes = require('./brandRoutes');
+const authMiddleware = require('../middlewares/authMiddleware');
+const router = express.Router();
+
+router.use('/users',authMiddleware, userRoutes);
+router.use('/category', categoryRoutes);
+router.use('/product', productRoutes);
+router.use('/cart', authMiddleware,cartRoutes);
+router.use('/image', imageRoutes);
+router.use('/order', authMiddleware,orderRoutes);
+router.use('/orderItem',authMiddleware, orderItemRoutes);
+router.use('/payment',authMiddleware, paymentRoutes);
+router.use('/review',authMiddleware, reviewRoutes);
+router.use('/auth', authRoutes);
+router.use('/brand', brandRoutes);
+module.exports = router;
